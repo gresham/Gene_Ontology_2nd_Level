@@ -244,7 +244,7 @@ lista_GO_uniques_pre = set(list_GO)
 #step_2: building a dic and buildind a list of GO ids
 print("#### BUILDING A DICTIONARY 2ND LEVEL ###")
 dict_2nd_GO_term = {}
-data_from_dic = csv.reader(open('dictionary_2_level_v2.csv'),delimiter=",")
+data_from_dic = csv.reader(open('dictionary_2_level.csv'),delimiter=",")
 for row in data_from_dic:
 	if row[4] == "is_a":
 		k,v = row[2],row[3]
@@ -299,7 +299,7 @@ for k,v in my_GO_and_term_ancest_selected.items():
 all_terms = all_terms_pre + lista_term_uniques_no_retrieve_ancestral
 
 #step_4: preparing data calculate frecueny and percentage
-data_from_dic = csv.reader(open('dictionary_2_level_v2.csv'),delimiter=",")
+data_from_dic = csv.reader(open('dictionary_2_level.csv'),delimiter=",")
 dict_categ_2ndterm = {}
 for row in data_from_dic:
     k,v = (row[0]+'-'+row[1]),row[3]
